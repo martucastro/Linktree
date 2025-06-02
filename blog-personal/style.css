@@ -12,7 +12,7 @@ html, body {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
-  overflow-x: hidden; /* 👈 agregado para evitar scroll horizontal */
+  overflow-x: hidden; 
 }
 
 .header-blog,
