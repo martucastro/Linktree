@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Parques Disney</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header-blog">
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="articulos.html">Artículos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="../index.html">Linktree</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-me">
+    <h2>¡Bienvenido a mi blog de los Parques de Disney!🎢✨🏰</h2>
+    <img src="imagenes/Martina.jpeg" alt="Martina Castro" class="foto-martina" />
+    <p>Soy Martina, apasionada por los parques temáticos y creadora de este blog.</p>
+    <blockquote>
+      <p>
+        Aquí encontrarás consejos para aprovechar tu visita, detalles sobre las atracciones imperdibles, 
+        horarios, y mucho más para que tu experiencia sea inolvidable.
+      </p>
+    </blockquote>
+  </section>
+
+  <main class="posts-grid">
+    <article class="post-card">
+      <img src="imagenes/magic-kingdom.avif" alt="Magic Kingdom" />
+      <div class="post-content">
+        <h2>🎠Magic Kingdom</h2>
+        <p class="date">10 de Mayo, 2025</p>
+        <p class="excerpt">Descubrí la magia y las atracciones clásicas del parque más icónico de Disney, con castillos, desfiles y personajes que todos amamos.</p>
+      </div>
+      <a href="articulo1.html" class="btn-read-more">Leer más</a>
+    </article>
+
+    <article class="post-card">
+      <img src="imagenes/epcot.webp" alt="EPCOT" />
+      <div class="post-content">
+        <h2>🌐EPCOT</h2>
+        <p class="date">15 de Mayo, 2025</p>
+        <p class="excerpt">Explorá la innovación tecnológica y la cultura global en este parque único que combina futuro y tradiciones del mundo.</p>
+      </div>
+      <a href="articulo2.html" class="btn-read-more">Leer más</a>
+    </article>
+
+    <article class="post-card">
+      <img src="imagenes/animal-kingdom.jpg" alt="Animal Kingdom" />
+      <div class="post-content">
+        <h2>🦁Animal Kingdom</h2>
+        <p class="date">20 de Mayo, 2025</p>
+        <p class="excerpt">Sumergite en la naturaleza, safaris y experiencias únicas que te conectan con la fauna y la aventura.</p>
+      </div>
+      <a href="articulo3.html" class="btn-read-more">Leer más</a>
+    </article>
+
+    <article class="post-card">
+      <img src="imagenes/hollywood-studios.jpg" alt="Hollywood Studios" />
+      <div class="post-content">
+        <h2>🎬Hollywood Studios</h2>
+        <p class="date">25 de Mayo, 2025</p>
+        <p class="excerpt">Viví la emoción de Star Wars, Toy Story y más, con atracciones y shows inspirados en las películas que marcaron generaciones.</p>
+      </div>
+      <a href="articulo4.html" class="btn-read-more">Leer más</a>
+    </article>
+
+    <article class="post-card">
+      <img src="imagenes/disney-universal.webp" alt="Disney vs Universal" />
+      <div class="post-content">
+        <h2>⚔️Disney vs Universal</h2>
+        <p class="date">30 de Mayo, 2025</p>
+        <p class="excerpt">Compará los dos gigantes de los parques temáticos para saber cuál se adapta mejor a tu estilo y preferencias.</p>
+      </div>
+      <a href="articulo5.html" class="btn-read-more">Leer más</a>
+    </article>
+  </main>
+
+  <section id="contacto">
+  <div class="contact-box">
+    <h2 class="contact-title">Contacto</h2>
+    <form class="contact-form" action="#" method="POST" novalidate>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit" class="btn-read-more">Enviar</button>
+    </form>
+  </div>
+  </section>
+
+  <footer class="footer-blog">
+    <p>© 2025 Martina Castro</p>
+  </footer>
+</body>
+</html>

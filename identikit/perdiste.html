@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juego de Redes Sociales</title>
+  <link rel="icon" href="iconos/redes.webp" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      background-color: rgb(200, 164, 221);
+      font-family: 'Rowdies', sans-serif;
+      text-align: center;
+      min-height: 100vh; 
+      display: flex;  
+      flex-direction: column; 
+    }
+
+    main {
+      flex-grow: 1;  
+    }
+
+    nav {
+      background-color: #c18edb;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #f8c6de;
+    }
+
+    .game-container {
+      background-color: antiquewhite;
+      width: 60%;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .question {
+      margin: 15px 0;
+    }
+
+    footer {
+      background-color: #f8c6de;
+      height: 100px;
+      text-align: center;
+      padding-top: 40px;
+      margin-top: auto;
+    }
+
+    footer p {
+      font-size: 16px;
+      color: black;
+    }
+
+    .options-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    .option {
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .option img {
+      width: 80px;
+      height: 80px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .option span {
+      font-size: 18px;
+    }
+
+    .next-button {
+      background-color: #c18edb;
+      color: white;
+      padding: 12px 24px;
+      font-size: 20px;
+      font-family: 'Rowdies', sans-serif;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.2s;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .next-button:hover {
+      background-color: #f8c6de;
+      color: black;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="index2.html">Ranking</a>
+    <a href="trivia.html">Juego</a>
+    <a href="playlist.html">Playlist</a>
+    <a href="../index.html">Linktree</a>
+  </nav>
+
+  <main>
+
+    <div class="game-container">
+      <h1>Perdiste!</h1>
+      <div class="question">
+        <p>No te preocupes, podes volver a intentar</p>
+        <a href="trivia.html" class="next-button">Volver a intentar</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div style="margin-bottom: 8px;">
+      <a href="http://www.instagram.com" target="_blank" style="text-decoration: none;">
+        <img src="iconos/instagram.webp" alt="Instagram" style="width: 30px; margin: 0 10px;">
+      </a>
+      <a href="http://www.spotify.com" target="_blank" style="text-decoration: none;">
+        <img src="iconos/spotify.webp" alt="Spotify" style="width: 30px; margin: 0 10px;">
+      </a>
+      <a href="http://www.tiktok.com" target="_blank" style="text-decoration: none;">
+        <img src="iconos/tiktok.webp" alt="TikTok" style="width: 30px; margin: 0 10px;">
+      </a>      
+    </div>
+    <p style="margin: 0; font-size: 14px; color: black;">&#169; 2025 Martina Castro</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Playlist favorita</title>
+    <link rel="icon" href="iconos/redes.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(200, 164, 221);
+            font-family: 'Rowdies', sans-serif;
+            text-align: center;
+            min-height: 100vh; 
+            display: flex;  
+            flex-direction: column; 
+        }
+
+        main {
+            flex-grow: 1;  
+        }
+
+        nav {
+            background-color: #c18edb;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #f8c6de;
+        }
+
+        aside {
+            background-color: rgb(200, 164, 221);
+            display: inline-block;
+            width: 20%;
+            height: 600px;
+            vertical-align: top;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        aside p {
+            font-size: 24px;
+            color: white; 
+            margin-bottom: 10px;
+        }
+
+        section {
+            background-color: antiquewhite;
+            display: inline-block;
+            width: 78%;
+            height: 600px;
+            vertical-align: top;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        footer {
+            background-color: #f8c6de;
+            height: 100px;
+            text-align: center;
+            padding-top: 40px;
+            margin-top: auto;
+        }
+
+        footer p {
+            font-size: 16px;
+            color: black;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #f3e5f5;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        li a {
+            color: #c18edb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            color: #f8c6de;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="index2.html">Ranking</a>
+        <a href="trivia.html">Juego</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="../index.html">Linktree</a>
+    </nav>
+
+    <main>
+        <aside>
+            <p>Canciones virales</p>
+            <ul>
+                <li><a href="playlist.html">Circles</a></li>
+                <li><a href="playlist2.html">I Like Me Better</a></li>
+                <li><a href="playlist3.html">Attention</a></li>
+                <li><a href="playlist4.html">Diamonds</a></li>
+                <li><a href="playlist5.html">Please Please Please</a></li>
+                <li><a href="playlist6.html">All I Want</a></li>
+                <li><a href="playlist7.html">Seven</a></li>
+            </ul>
+            <img src="redes sociales/musica.jpg" alt="icono de musica" width="215">
+        </aside><!--
+    --><section>
+        <h1>I Like Me Better</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hs-bzJ7PPT4?si=3h8HEcUyYN9akL0d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div style="margin-bottom: 8px;">
+            <a href="http://www.instagram.com" target="_blank" style="text-decoration: none;">
+                <img src="iconos/instagram.webp" alt="Instagram" style="width: 30px; margin: 0 10px;">
+            </a>
+
+            <a href="http://www.spotify.com" target="_blank" style="text-decoration: none;">
+                <img src="iconos/spotify.webp" alt="Spotify" style="width: 30px; margin: 0 10px;">
+            </a>
+            
+            <a href="http://www.tiktok.com" target="_blank" style="text-decoration: none;">
+                <img src="iconos/tiktok.webp" alt="TikTok" style="width: 30px; margin: 0 10px;">
+            </a>      
+        </div>
+        <p style="margin: 0; font-size: 14px; color: black;">&#169; 2025 Martina Castro</p>
+    </footer>
+</body>
+</html>
