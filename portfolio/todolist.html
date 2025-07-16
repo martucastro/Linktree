@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Tareas - Martina Castro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Lista de Tareas</h1>
+  </header>
+  <section>
+    <div class="todo-container">
+      <input type="text" id="taskInput" placeholder="Nueva tarea...">
+      <button onclick="addTask()">Agregar</button>
+      <ul id="taskList"></ul>
+      <div class="back-button">
+        <a href="index.html">← Volver al portfolio</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="social-icons">
+      <a href="http://linkedin.com/in/martina-castro-b42466350" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/martu.castroo" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Martina Castro. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const taskList = document.getElementById("taskList");
+    const taskInput = document.getElementById("taskInput");
+
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      tasks.forEach(task => createTaskElement(task));
+    }
+
+    function addTask() {
+      const task = taskInput.value.trim();
+      if (task === "") return;
+      createTaskElement(task);
+      saveTask(task);
+      taskInput.value = "";
+    }
+
+    function createTaskElement(task) {
+      const li = document.createElement("li");
+      li.textContent = task;
+
+      const btn = document.createElement("button");
+      btn.textContent = "Eliminar";
+      btn.onclick = () => {
+        li.remove();
+        deleteTask(task);
+      };
+
+      li.appendChild(btn);
+      taskList.appendChild(li);
+    }
+
+    function saveTask(task) {
+      const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      tasks.push(task);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    function deleteTask(task) {
+      let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      tasks = tasks.filter(t => t !== task);
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+
+    loadTasks();
+  </script>
+</body>
+</html>

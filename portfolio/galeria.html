@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galería - Martina Castro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+  <header><h1>Galería de Imágenes</h1></header>
+
+  <section>
+    <div class="slider-container">
+      <div class="slider-wrapper">
+        <div class="slider-item"><img src="imagen-1.jpg" alt="Imagen IA 1"></div>
+        <div class="slider-item"><img src="imagen-2.jpg" alt="Imagen IA 2"></div>
+        <div class="slider-item"><img src="imagen-3.jpg" alt="Imagen IA 3"></div>
+        <div class="slider-item"><img src="imagen-4.jpg" alt="Imagen IA 4"></div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+    <div class="back-button">
+      <a href="index.html">← Volver al portfolio</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="http://linkedin.com/in/martina-castro-b42466350" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/martu.castroo" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Martina Castro. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const wrapper = document.querySelector('.slider-wrapper');
+    const totalItems = document.querySelectorAll('.slider-item').length;
+    let index = 0;
+
+    document.querySelector('.next').addEventListener('click', () => {
+      index = (index + 1) % totalItems;
+      updateSlider();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      index = (index - 1 + totalItems) % totalItems;
+      updateSlider();
+    });
+
+    function updateSlider() {
+      wrapper.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+</body>
+</html>
+
+
+

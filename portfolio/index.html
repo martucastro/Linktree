@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Martina Castro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-flex">
+      <h1 class="logo">Martina Castro</h1>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+        <a href="../index.html">Linktree</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h2>¡Hola! Soy Martina Castro</h2>
+        <p>Bienvenido/a a mi portfolio. Descubrí mis proyectos y conocé más sobre mí.</p>
+        <a href="#sobre-mi" class="hero-btn">Ver más</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <div class="about-card">
+        <img src="foto-cv.jpeg" alt="Foto Martina" class="about-photo" />
+        <h3 class="nombre">Martina Castro</h3>
+      </div>
+      <p class="about-text">
+        Soy estudiante de Ingeniería Informática en UADE, enfocada en desarrollo web y diseño UX/UI. 
+        Me apasiona crear experiencias digitales que sean intuitivas, creativas y funcionales. 
+        Disfruto aprender nuevas tecnologías y aplicar mis conocimientos en proyectos reales que impacten positivamente en las personas. 
+        Busco siempre combinar lógica, diseño y empatía para lograr soluciones innovadoras.
+      </p>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+      <p class="section-intro">Estos son algunos de mis proyectos, realizados con HTML, CSS y JavaScript.</p>
+      <div class="article-list">
+        <div class="article-card">
+          <h3><i class="fas fa-images"></i> Galería de Imágenes</h3>
+          <blockquote>
+            <p>Slider interactivo con imágenes generadas por IA.</p>
+          </blockquote>
+          <a href="galeria.html" class="btn-read-more">Ver galería</a>
+        </div>
+
+        <div class="article-card">
+          <h3><i class="fas fa-calculator"></i> Calculadora</h3>
+          <blockquote>
+            <p>Calculadora para operaciones básicas.</p>
+          </blockquote>
+          <a href="calculadora.html" class="btn-read-more">Ver calculadora</a>
+        </div>
+
+        <div class="article-card">
+          <h3><i class="fas fa-check-square"></i> Lista de Tareas</h3>
+          <blockquote>
+            <p>Aplicación para organizar tareas.</p>
+          </blockquote>
+          <a href="todolist.html" class="btn-read-more">Ver lista</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul class="skills-list">
+        <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
+        <li><i class="fas fa-database"></i> SQL y Bases de Datos</li>
+        <li><i class="fas fa-mobile-alt"></i> Responsive Design</li>
+        <li><i class="fas fa-vial"></i> Testing y Metodologías Ágiles</li>
+        <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+        <li><i class="fab fa-python"></i> Python y Java</li>
+      </ul>
+      <div class="cv-container">
+        <a class="cv-link" href="cv-martina-castro.pdf" download>Descargar CV</a>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p class="section-intro">¡Dejame tu mensaje!</p>
+      <form action="https://formspree.io/f/xyzpgngr" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <textarea name="message" placeholder="Escribí tu mensaje..." rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div class="back-to-top-container">
+      <a href="#" class="back-to-top-btn"><i class="fas fa-arrow-up"></i> Volver arriba</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="http://linkedin.com/in/martina-castro-b42466350" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/martu.castroo" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Martina Castro. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

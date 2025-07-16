@@ -1,0 +1,676 @@
+/* 🎨 Reset y básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  color: #333;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+/* 🟣 Header */
+header {
+  background: linear-gradient(135deg, #5c6ac4, #3845a3);
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #e2e8f0;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* 🟠 Main sections */
+main {
+  width: 100%;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  margin: 0;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 70vh;
+}
+
+section:not(.hero):nth-of-type(odd) {
+  background: white;
+}
+
+section:not(.hero):nth-of-type(even) {
+  background: #f5f7fa;
+}
+
+h2 {
+  color: #5c6ac4;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.section-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  background-image: url('foto-portada.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 51, 88, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #5c6ac4;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.hero-btn:hover {
+  background: #3845a3;
+  transform: translateY(-3px);
+}
+
+/* 🟢 Sobre mí */
+.about-photo {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem auto;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  margin: 0 auto 2rem auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nombre {
+  margin-top: 1rem;
+  color: #5c6ac4;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+/* 🟣 Proyectos */
+.article-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.article-card {
+  background: white;
+  border: 2px solid #5c6ac4;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.article-card h3 {
+  color: #5c6ac4;
+  margin-bottom: 0.5rem;
+}
+
+.article-card blockquote {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid #5c6ac4;
+  color: #555;
+}
+
+.article-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #5c6ac4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-read-more:hover {
+  background: #3845a3;
+}
+
+/* 🟠 Habilidades */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto 1.5rem auto;
+  max-width: 800px;
+}
+
+.skills-list li {
+  background: #ffffff;
+  border: 2px solid #5c6ac4;
+  color: #5c6ac4;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.skills-list li i {
+  font-size: 1.2rem;
+}
+
+.skills-list li:hover {
+  background: #5c6ac4;
+  color: white;
+}
+
+.skills-list li:hover i {
+  color: white;
+}
+
+/* CV link */
+.cv-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #5c6ac4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+  font-size: 1.1rem;
+}
+
+.cv-link:hover {
+  background: #3845a3;
+}
+
+.cv-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* 🟠 Formulario */
+form {
+  max-width: 600px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  background: #5c6ac4;
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #3845a3;
+}
+
+/* 🟠 Footer */
+footer {
+  background: #5c6ac4;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #e2e8f0;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2rem;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e2e8f0;
+}
+
+/* 💥 Slider (Galería) */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 3rem auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-item {
+  flex: 0 0 100%;
+  max-height: 400px;
+}
+
+.slider-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(92, 106, 196, 0.8);
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+button.prev:hover,
+button.next:hover {
+  background: rgba(56, 69, 163, 0.9);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* 💻 Calculadora completa */
+section .calculator {
+  margin: 0 auto;
+}
+
+.calculator {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+}
+
+#display {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background: #f0f0f0;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: #e2e8f0;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #cfd8e3;
+  transform: translateY(-3px);
+}
+
+button:active {
+  background: #b5c0cc;
+}
+
+button.op {
+  background: #5c6ac4;
+  color: white;
+}
+
+button.op:hover {
+  background: #3845a3;
+}
+
+button.equal {
+  background: #10b981;
+  color: white;
+}
+
+button.equal:hover {
+  background: #059669;
+}
+
+button.clear {
+  background: #ef4444;
+  color: white;
+}
+
+button.clear:hover {
+  background: #dc2626;
+}
+
+/* ✅ Lista de Tareas */
+.todo-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.todo-container input {
+  width: 70%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.todo-container button {
+  padding: 0.8rem 1rem;
+  margin-left: 5px;
+  background: #5c6ac4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.todo-container button:hover {
+  background: #3845a3;
+}
+
+.todo-container ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.todo-container li {
+  background: #f0f0f0;
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-container li button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.todo-container li button:hover {
+  background: #dc2626;
+}
+
+/* 🔙 Botón "Volver al portfolio" */
+.back-button {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-button a {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #5c6ac4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-button a:hover {
+  background: #3845a3;
+  transform: translateY(-3px);
+}
+
+/* 🔝 Botón Volver arriba */
+.back-to-top-container {
+  text-align: center;
+  margin-top: 2rem;
+  background: white/* mismo fondo que tu body */
+  padding: 2rem 0; /* para que no quede pegado */
+}
+
+.back-to-top-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #5c6ac4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-to-top-btn:hover {
+  background: #3845a3;
+  transform: translateY(-3px);
+}
+
+.back-to-top-btn i {
+  margin-right: 5px;
+}
+
+/* 🟣 Media queries */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  #display {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
