@@ -24,7 +24,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section id="inicio" class="hero">
       <div class="hero-content">
         <h2>¡Hola! Soy Martina Castro</h2>
@@ -33,7 +32,6 @@
       </div>
     </section>
 
-    <!-- Sobre mí -->
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
       <div class="about-card">
@@ -48,7 +46,6 @@
       </p>
     </section>
 
-    <!-- Proyectos -->
     <section id="proyectos">
       <h2>Proyectos</h2>
       <p class="section-intro">Estos son algunos de mis proyectos, realizados con HTML, CSS y JavaScript.</p>
@@ -79,7 +76,6 @@
       </div>
     </section>
 
-    <!-- Habilidades -->
     <section id="habilidades">
       <h2>Habilidades</h2>
       <ul class="skills-list">
@@ -95,13 +91,12 @@
       </div>
     </section>
 
-    <!-- Contacto -->
     <section id="contacto">
       <h2>Contacto</h2>
       <p class="section-intro">¡Dejame tu mensaje!</p>
-      <form action="https://formspree.io/f/xyzpgngr" method="POST">
-        <input type="text" name="name" placeholder="Tu nombre" required>
-        <input type="email" name="email" placeholder="Tu email" required>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu email" required />
         <textarea name="message" placeholder="Escribí tu mensaje..." rows="5" required></textarea>
         <button type="submit">Enviar</button>
       </form>
@@ -119,5 +114,25 @@
     </div>
     <p>&copy; 2025 Martina Castro. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("eBjL5ShYHnab-ZHXE");
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_3oban45", "template_90y57ox", this)
+        .then(function() {
+          alert("¡Mensaje enviado con éxito!");
+          document.getElementById("contact-form").reset();
+        }, function(error) {
+          alert("Ocurrió un error al enviar 😢");
+          console.log(error);
+        });
+    });
+  </script>
 </body>
 </html>
